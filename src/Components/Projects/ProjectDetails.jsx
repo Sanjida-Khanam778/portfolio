@@ -12,8 +12,8 @@ const projectDetails = {
       "ClickCash is a micro-tasking and earning platform that allows users to complete small online tasks and earn rewards. It includes user authentication, task management, and an admin dashboard to manage job postings. The platform is designed to be user-friendly, secure, and scalable for future enhancements.",
     technologies: ["React", "Tailwind CSS", "Firebase", "Mongodb", "Express.js", "Stripe"],
     github:
-      "https://github.com/your-github-username/clickcash", // Replace with actual GitHub link
-    live: "https://clickcash.web.app", // Replace with actual live site URL
+      "https://github.com/Sanjida-Khanam778/click-cash-client", // Replace with actual GitHub link
+    live: "https://click-cash-9fbe3.web.app", // Replace with actual live site URL
     challenges:
       "Faced challenges with payment integration and user engagement strategies.",
     improvements: "Planning to implement a better payment gateway and improve task automation.",
