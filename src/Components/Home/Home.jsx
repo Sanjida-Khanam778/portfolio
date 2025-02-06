@@ -9,11 +9,11 @@ import Contact from "../Contact/Contact";
 const Home = () => {
   return (
     <div>
-      <section className="max-w-screen-lg mx-auto">
+      <section className="w-11/12 mx-auto">
         <Banner></Banner>
        
       </section>
-      <section className="max-w-screen-xl mx-auto">
+      <section className="container mx-auto">
       <About></About>
         <Skills></Skills>
         <Education></Education>

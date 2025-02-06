@@ -2,7 +2,7 @@ import React from "react";
 import { FaDownload, FaFacebook, FaLinkedin, FaPhone } from "react-icons/fa";
 import img from "../../assets/profile.png";
 
-// Google Drive থেকে ডাউনলোডযোগ্য লিংক দিন
+
 const resume =
   "https://drive.google.com/file/d/1La9nQUB8Qegr2ef_mt1Fd2wEHK5WWeW3/view?usp=sharing";
 
