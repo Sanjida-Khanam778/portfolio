@@ -9,7 +9,7 @@ import Contact from "../Contact/Contact";
 const Home = () => {
   return (
     <div>
-      <section className="w-11/12 mx-auto">
+      <section className="w-11/12 lg:w-10/12 mx-auto">
         <Banner></Banner>
        
       </section>

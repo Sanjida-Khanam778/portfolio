@@ -1,3 +1,4 @@
+import React from "react";
 import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -28,7 +29,7 @@ const Navbar = () => {
   return (
     <>
       <div className="sticky top-0 z-10 text-white bg-black/5 backdrop-blur-md">
-        <div className="navbar w-11/12 lg:w-11/12 mx-auto">
+        <div className="navbar w-11/12 lg:w-10/12 mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -58,7 +59,7 @@ const Navbar = () => {
                 {navlinks}
               </ul>
             </div>
-            <a className="text-2xl md:text-4xl font-bold uppercase text-[#FD6E0A]">
+            <a className="text-xl text-[#15F5BA] md:text-3xl font-bold uppercase">
               Sanjida
             </a>
           </div>
@@ -67,8 +68,8 @@ const Navbar = () => {
           </div>
           <div className="navbar-end">
             <a href={resume} download target="_blank" rel="noopener noreferrer">
-              <button className="bg-[#FD6E0A] flex items-center gap-2 rounded-lg font-bold text-white px-4 py-2 md:px-8 md:py-3 mr-2 md:mr-0 md:text-xl">
-                <FaDownload /> Download CV
+                 <button className="border border-[#15F5BA] text-white flex items-center gap-2 rounded-md font-medium px-2 py-1 md:px-4 md:py-2 mr-2 md:mr-0 md:text-xl">
+                <FaDownload className="text-sm"/> Resume
               </button>
             </a>
           </div>

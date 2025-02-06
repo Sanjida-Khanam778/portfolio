@@ -5,6 +5,7 @@ import node from "../../assets/icons/nodejs.png";
 import mongodb from "../../assets/icons/mongo.png";
 import html from "../../assets/icons/html.png";
 import css from "../../assets/icons/css.png";
+import firebase from "../../assets/icons/firebase.png";
 const Skills = () => {
   return (
     <div className="my-10 lg:my-24 max-w-screen-lg mx-auto">
@@ -15,7 +16,7 @@ const Skills = () => {
         <p className="section-description mb-4 md:mb-8 text-center">
           Tools & Technologies That Shape My Craft
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-3">
           <div className="p-7 rounded-md shadow-custom-dark">
             <img src={html} className="mx-auto" alt="" />
             <h4 className="font-bold mt-3 text-center">HTML</h4>
@@ -26,7 +27,7 @@ const Skills = () => {
           </div>
           <div className="p-7 rounded-md shadow-custom-dark">
             <img src={js} className="mx-auto" alt="" />
-            <h4 className="font-bold mt-3 text-center">Vanilla JavaScript</h4>
+            <h4 className="font-bold mt-3 text-center">JavaScript</h4>
           </div>
           <div className="p-7 rounded-md shadow-custom-dark">
             <img src={react} className="mx-auto" alt="" />
@@ -35,6 +36,10 @@ const Skills = () => {
           <div className="p-7 rounded-md shadow-custom-dark">
             <img src={node} className="mx-auto" alt="" />
             <h4 className="font-bold mt-3 text-center">Node.js</h4>
+          </div>
+          <div className="p-7 rounded-md shadow-custom-dark">
+            <img src={firebase} className="mx-auto" alt="" />
+            <h4 className="font-bold mt-3 text-center">Firebase</h4>
           </div>
           <div className="p-7 rounded-md shadow-custom-dark">
             <img src={mongodb} className="mx-auto" alt="" />
