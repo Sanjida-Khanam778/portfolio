@@ -1,60 +1,131 @@
+import axios from "axios";
 import React from "react";
-import { FaEnvelope, FaPhone, FaWhatsapp } from "react-icons/fa";
-import fb from "../../assets/icons/facebook.png";
-import insta from "../../assets/icons/insta.png";
-import twitter from "../../assets/icons/twitter.png";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaPhone,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Contact = () => {
+  const handleSubmit = async e =>{
+    e.preventDefault()
+    const form = e.target
+    const name= form.name.value
+    const email= form.email.value
+    const message= form.message.value
+    const msgData = {
+      name, email, message
+    }
+    const {data} = await axios.post('https://portfolio-server-nine-umber.vercel.app/sendMails', msgData)
+    console.log(data)
+  }
   return (
-    <footer className="bg-[#FFF8F3] text-black p-10 mb-10 md:mb-24">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+    <footer className="text-white p-10 md:p-16 mb-10 md:mb-24">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Left Column: Contact Info */}
-        <div>
-          <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
-          <p className="text-gray-500 mb-4">
-            Feel free to reach out via email, phone, or WhatsApp. Available between 9:00 A.M - 8:00 P.M ET, Monday to Friday.
+        <div className="backdrop-blur-md bg-white/10 border flex flex-col border-white/20 p-8 rounded-lg shadow-lg">
+          <h3 className="text-3xl font-bold mb-4 text-[#15F5BA] leading-loose tracking-widest">
+            Let's Connect
+          </h3>
+          <p className="mb-6 text-gray-300">
+            Reach out via email, phone, or WhatsApp. I'm available to discuss
+            ideas, collaborate, or assist with your queries. Let's connect and
+            create something amazing together!
           </p>
 
           {/* Contact Details */}
-          <div className="space-y-2">
-            <p className="flex items-center gap-2 text-lg">
-              <FaEnvelope className="text-red-500" /> 
-              <a href="mailto:sanjida.ice.778@gmail.com" className="text-blue-600 hover:underline">sanjida.ice.778@gmail.com</a>
+          <div className="space-y-3 flex-grow flex flex-col justify-start">
+            <p className="flex items-center gap-3 text-lg">
+              <FaEnvelope className="text-red-500" />
+              <a
+                href="mailto:sanjida.ice.778@gmail.com"
+                className="hover:text-[#15F5BA] transition duration-300"
+              >
+                sanjida.ice.778@gmail.com
+              </a>
             </p>
-            <p className="flex items-center gap-2 text-lg">
+            <p className="flex items-center gap-3 text-lg">
               <FaPhone className="text-green-500" /> 01684796286
             </p>
-            <p className="flex items-center gap-2 text-lg">
-              <FaWhatsapp className="text-green-600" /> 
-              <a href="https://wa.me/01684796286" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+            <p className="flex items-center gap-3 text-lg">
+              <FaWhatsapp className="text-green-600" />
+              <a
+                href="https://wa.me/01684796286"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#15F5BA] transition duration-300"
+              >
                 Chat on WhatsApp
               </a>
             </p>
           </div>
 
           {/* Social Media Links */}
-          <div className="flex gap-4 mt-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src={fb} alt="Facebook" className="w-8 h-8"/>
+          <div className="flex gap-5 mt-6">
+            <a
+              href="https://www.facebook.com/profile.php?id=100034140082279"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook className="text-3xl hover:text-[#15F5BA]"></FaFacebook>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src={insta} alt="Instagram" className="w-8 h-8"/>
+            <a
+              href="https://www.linkedin.com/in/sanjida-khanam-ice"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="text-3xl hover:text-[#15F5BA]"></FaLinkedin>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src={twitter} alt="Twitter" className="w-8 h-8"/>
+            <a
+              href="https://github.com/Sanjida-Khanam778"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="text-3xl hover:text-[#15F5BA]"></FaGithub>
+            </a>
+            <a
+              href="https://x.com/SanjidaKhans"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter className="text-3xl hover:text-[#15F5BA]"></FaTwitter>
             </a>
           </div>
         </div>
 
         {/* Right Column: Contact Form */}
-        <div>
-          <h3 className="text-2xl font-bold mb-4">Send a Message</h3>
-          <form className="space-y-4">
-            <input type="text" placeholder="Your Name" className="w-full p-3 rounded-md bg-white text-black border border-gray-300 focus:outline-none"/>
-            <input type="email" placeholder="Your Email" className="w-full p-3 rounded-md bg-white text-black border border-gray-300 focus:outline-none"/>
-            <textarea placeholder="Message" rows="5" className="w-full p-3 rounded-md bg-white text-black border border-gray-300 focus:outline-none"></textarea>
-            <button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-md font-bold">
-              Submit
+        <div className="backdrop-blur-md bg-white/10 border border-white/20 p-8 rounded-lg shadow-lg">
+          <h3 className="text-3xl font-bold mb-4 text-[#15F5BA] leading-loose tracking-widest">
+            Send a Message
+          </h3>
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              className="w-full p-3 rounded-md bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-400 text-white placeholder-gray-400"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              className="w-full p-3 rounded-md bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-400 text-white placeholder-gray-400"
+            />
+            <textarea
+              placeholder="Message"
+              name="message"
+              rows="5"
+              className="w-full p-3 rounded-md bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-400 text-white placeholder-gray-400"
+            ></textarea>
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-[#14e4ac] to-[#3597b5] hover:from-[#0EBF94] hover:to-[#15F5BA] text-white p-3 rounded-md font-medium shadow-lg transition duration-300"
+            >
+              Send Message
             </button>
           </form>
         </div>

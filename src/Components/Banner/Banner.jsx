@@ -3,8 +3,7 @@ import {
   FaDownload,
   FaFacebook,
   FaGithub,
-  FaLinkedin,
-  FaPhone,
+  FaLinkedin
 } from "react-icons/fa";
 import img from "../../assets/profile.png";
 
