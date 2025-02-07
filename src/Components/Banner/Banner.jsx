@@ -28,7 +28,7 @@ const Banner = () => {
         </p>
         <div className="flex gap-2 text-4xl my-8">
           <a
-            href="https://www.facebook.com/your-profile"
+            href="https://www.facebook.com/profile.php?id=100034140082279"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:text-blue-800"
@@ -37,7 +37,7 @@ const Banner = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/sanjida-khanam-ice"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-700"
@@ -45,7 +45,7 @@ const Banner = () => {
             <FaLinkedin className="text-white" />
           </a>
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://github.com/Sanjida-Khanam778"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-700"

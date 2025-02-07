@@ -8,16 +8,7 @@ const About = () => {
           About Me
         </h3>
         <p className="text-lg mb-5 md:mb-10 text-justify">
-          I am a passionate frontend developer with a deep love for creating
-          visually appealing and user-friendly web applications. My journey into
-          programming started with curiosity and a desire to build something
-          meaningful. Over time, I fell in love with coding, especially crafting
-          interactive and dynamic user experiences. Beyond programming, I enjoy
-          exploring creative pursuits like painting and photography, which help
-          me bring a unique artistic touch to my designs. I also love playing
-          sports, as it keeps me active and disciplined. My goal is to
-          continuously learn, grow, and contribute to projects that make a real
-          impact.
+        From the moment I wrote my first "Hello, World!" my programming journey has been a thrilling adventure of constant learning and creative exploration, evolving from experimenting with simple scripts to tackling complex, real-world challenges with languages like Python and JavaScript. I thrive on work that not only tests my technical skills but also fuels my passion for innovation, particularly in projects that merge problem-solving with a touch of artistry—be it through designing user-friendly applications or streamlining backend systems for efficiency. Outside of programming, I find balance and inspiration in a variety of pursuits; whether I’m getting lost in the rhythm of competitive sports or expressing myself through painting, these hobbies recharge my creative spirit and provide fresh perspectives that I bring back to my coding projects. At my core, I’m a curious and driven individual who believes in embracing every challenge as an opportunity to grow and make a meaningful impact, both in technology and in life.
         </p>
         <div className="flex flex-col lg:flex-row justify-around">
           <div className="about-item">
