@@ -35,7 +35,7 @@ const Projects = () => {
 
       <div className="grid md:grid-cols-3 gap-8 px-5">
         {projects.map((project) => (
-          <div key={project.id} className="bg-gradient-to-r from-[#8a8a8add]/10 to-gray-800 shadow-lg rounded-lg p-5">
+          <div key={project.id} className="bg-gradient-to-r from-[#1d1d1d]/20 to-[#151515] shadow-lg rounded-lg p-5">
             <img src={project.image} alt={project.name} className="w-full object-cover rounded-sm h-56" />
             <h3 className="text-2xl font-semibold mt-4">{project.name}</h3>
             <p className="mt-2 text-gray-300">{project.description}</p>

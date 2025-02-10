@@ -1,5 +1,6 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
+import { CgSpinnerAlt } from "react-icons/cg";
 import {
   FaEnvelope,
   FaFacebook,
@@ -9,9 +10,12 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false)
   const handleSubmit = async e =>{
+    setLoading(true)
     e.preventDefault()
     const form = e.target
     const name= form.name.value
@@ -21,10 +25,17 @@ const Contact = () => {
       name, email, message
     }
     const {data} = await axios.post('https://portfolio-server-nine-umber.vercel.app/sendMails', msgData)
-    console.log(data)
+    if(data){
+      Swal.fire({
+        title: "Message sent!",
+        icon: "success",
+        draggable: true
+      });
+    }
+    setLoading(false)
   }
   return (
-    <footer className="text-white p-10 md:p-16 mb-10 md:mb-24">
+    <footer className="text-white md:p-16 mt-10 mx-auto mb-10 md:mb-24">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Left Column: Contact Info */}
         <div className="backdrop-blur-md bg-white/10 border flex flex-col border-white/20 p-8 rounded-lg shadow-lg">
@@ -121,12 +132,23 @@ const Contact = () => {
               rows="5"
               className="w-full p-3 rounded-md bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-400 text-white placeholder-gray-400"
             ></textarea>
-            <button
+            {loading ? (
+              <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-[#14e4ac] to-[#3597b5] hover:from-[#0EBF94] hover:to-[#15F5BA] text-white p-3 rounded-md font-medium shadow-lg transition duration-300"
+            >
+                            <CgSpinnerAlt className="animate-spin m-auto" />
+
+            </button>
+              ) : (
+                <button
               type="submit"
               className="w-full bg-gradient-to-r from-[#14e4ac] to-[#3597b5] hover:from-[#0EBF94] hover:to-[#15F5BA] text-white p-3 rounded-md font-medium shadow-lg transition duration-300"
             >
               Send Message
             </button>
+              )}
+            
           </form>
         </div>
       </div>

@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <>
       <div className="sticky top-0 z-10 text-white bg-black/5 backdrop-blur-md">
-        <div className="navbar w-11/12 lg:w-10/12 mx-auto">
+        <div className="navbar lg:w-10/12 mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -59,9 +59,12 @@ const Navbar = () => {
                 {navlinks}
               </ul>
             </div>
+            <div className="flex items-center fap-4">
+            <img src="/favicon.png" className="h-10 w-10" alt="" />
             <a className="text-xl text-[#15F5BA] md:text-3xl font-bold uppercase">
-              Sanjida
+              anjida
             </a>
+            </div>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 font-bold">{navlinks}</ul>

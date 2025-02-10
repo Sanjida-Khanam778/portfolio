@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="w-11/12 md:w-10/12 mx-auto">
-      <section className="text-center text-white w-10/12 mx-auto p-10 md:w-full lg:px-[130px] lg:py-[150px]">
+    <div className="md:w-10/12 mx-auto">
+      <section className="text-center text-white w-10/12 mx-auto md:w-full lg:px-[130px] lg:py-[150px]">
         <h3 className="text-4xl font-bold mb-5 md:mb-10">
           About Me
         </h3>

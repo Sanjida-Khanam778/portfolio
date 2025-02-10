@@ -61,7 +61,7 @@ const ProjectDetails = () => {
     return <h2 className="text-center text-2xl">Project not found</h2>;
 
   return (
-    <div className="min-h-screen flex justify-center text-white items-center p-10">
+    <div className="min-h-screen flex justify-center text-white items-center md:p-10">
       <div className="max-w-3xl  shadow-lg rounded-lg p-8">
         <img src={project.image} alt="" />
         <h2 className="text-4xl font-bold  mt-10">{project.name}</h2>

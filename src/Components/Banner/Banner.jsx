@@ -3,16 +3,18 @@ import {
   FaDownload,
   FaFacebook,
   FaGithub,
-  FaLinkedin
+  FaLinkedin,
+  FaTwitter
 } from "react-icons/fa";
 import img from "../../assets/profile.png";
+
 
 const resume =
   "https://drive.google.com/file/d/1La9nQUB8Qegr2ef_mt1Fd2wEHK5WWeW3/view?usp=sharing";
 
 const Banner = () => {
   return (
-    <div className="flex flex-col-reverse text-white w-11/12 mx-auto xl:w-full lg:flex-row justify-between items-center gap-10 my-10 lg:my-24">
+    <div className="flex flex-col-reverse text-white w-11/12 mx-auto xl:w-full lg:flex-row justify-evenly items-center gap-10 my-10 lg:my-24">
       <div className="lg:w-1/2">
         <h4 className="font-medium text-2xl lg:text-2xl text-white">
           Hi, I am
@@ -31,7 +33,7 @@ const Banner = () => {
             href="https://www.facebook.com/profile.php?id=100034140082279"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800"
+            className="text-4xl hover:text-[#15F5BA]"
           >
             <FaFacebook className="text-white" />
           </a>
@@ -40,7 +42,7 @@ const Banner = () => {
             href="https://www.linkedin.com/in/sanjida-khanam-ice"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-700"
+            className="text-4xl hover:text-[#15F5BA]"
           >
             <FaLinkedin className="text-white" />
           </a>
@@ -48,10 +50,17 @@ const Banner = () => {
             href="https://github.com/Sanjida-Khanam778"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:text-blue-700"
+            className="text-4xl hover:text-[#15F5BA]"
           >
             <FaGithub className="text-white" />
           </a>
+           <a
+              href="https://x.com/SanjidaKhans"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter className="text-4xl hover:text-[#15F5BA]"></FaTwitter>
+            </a>
         </div>
         <div className="flex flex-col md:flex-row gap-3 mt-5 lg:mt-12">
           <a href={resume} download target="_blank" rel="noopener noreferrer">
@@ -61,7 +70,7 @@ const Banner = () => {
           </a>
         </div>
       </div>
-      <img className="w-full md:w-1/3" src={img} alt="Profile" />
+      <img className="w-full md:w-1/3" src='https://i.imgur.com/3CMG4gn.png' alt="Profile" />
     </div>
   );
 };
